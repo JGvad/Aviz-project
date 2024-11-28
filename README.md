@@ -41,7 +41,7 @@
 
 **لینک تماس**: 
 
-[ایمیل من](javadHeidary.dev@gmail.com) 
+[ایمیل من](mailto:javadHeidary.dev@gmail.com) 
 
 [تلگرام من](https://t.me/JavadHeiDev)
 
