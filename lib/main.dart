@@ -15,7 +15,6 @@ void main() async {
   await Hive.openBox<SavedPromotion>('SavedBox');
   serviceLocator();
   bool isLogin = await AuthManagement.isLogin();
-
   bool checkFirstTime = await AuthManagement.checkFirstTime();
 
   runApp(AvizeApp(
