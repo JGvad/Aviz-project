@@ -1,24 +1,24 @@
-import 'package:aviz/Di/di.dart';
-import 'package:aviz/Feature/Dashboard/view/dashboard_screen.dart';
-import 'package:aviz/Feature/DetialPromotion/bloc/bloc/detial_promotion_bloc.dart';
-import 'package:aviz/Feature/Profile/bloc/bloc/profile_bloc.dart';
-import 'package:aviz/Util/created_time_promotion.dart';
-import 'package:aviz/Util/result_massage.dart';
-import 'package:aviz/UtilNetwork/auth_management.dart';
-import 'package:flutter/material.dart';
-import 'package:dotted_dashed_line/dotted_dashed_line.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:aviz/Constants/color_constant.dart';
 import 'package:aviz/Constants/image_constant.dart';
 import 'package:aviz/Core/data/models/promotion_model.dart';
+import 'package:aviz/Di/di.dart';
+import 'package:aviz/Feature/Dashboard/view/dashboard_screen.dart';
+import 'package:aviz/Feature/DetialPromotion/bloc/bloc/detial_promotion_bloc.dart';
 import 'package:aviz/Feature/DetialPromotion/view/component/desciption_component.dart';
 import 'package:aviz/Feature/DetialPromotion/view/component/detial_tab_horizental_component.dart';
 import 'package:aviz/Feature/DetialPromotion/view/component/facilities_component.dart';
 import 'package:aviz/Feature/DetialPromotion/view/component/price_component.dart';
 import 'package:aviz/Feature/DetialPromotion/view/component/specifications_component.dart';
+import 'package:aviz/Feature/Profile/bloc/bloc/profile_bloc.dart';
+import 'package:aviz/Util/created_time_promotion.dart';
+import 'package:aviz/Util/result_massage.dart';
+import 'package:aviz/UtilNetwork/auth_management.dart';
 import 'package:aviz/Widgets/cheched_image_widget.dart';
+import 'package:dotted_dashed_line/dotted_dashed_line.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class DetialPromotionScreen extends StatelessWidget {
   DetialPromotionScreen(
@@ -103,7 +103,7 @@ class DetialPromotionScreen extends StatelessWidget {
           onTap: () => Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => DashboardScreen(),
+              builder: (context) => const DashboardScreen(),
             ),
           ),
           child: SvgPicture.asset(AppSvg.arrowRightIcon),

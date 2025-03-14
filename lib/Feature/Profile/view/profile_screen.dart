@@ -450,8 +450,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
       ),
       child: ClipPath(
           clipper: ContinuousClipper(),
-          child: CachedImage(
-            imageUrl: imageUrl,
+          child: const CachedImage(
+            imageUrl: 'assets/images/Vector.png',
           )),
     );
   }

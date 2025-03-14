@@ -1,12 +1,12 @@
+import 'package:aviz/Constants/color_constant.dart';
 import 'package:aviz/Constants/image_constant.dart';
 import 'package:aviz/Feature/AddPromotion/data/model/sub_category_model.dart';
 import 'package:aviz/Feature/AddPromotion/data/model/temporary_promotion_model.dart';
 import 'package:aviz/Util/result_massage.dart';
 import 'package:aviz/Widgets/buttom_swicher_widget.dart';
-import 'package:aviz/Widgets/header_component_widget.dart';
 import 'package:aviz/Widgets/buttom_widget.dart';
+import 'package:aviz/Widgets/header_component_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:aviz/Constants/color_constant.dart';
 import 'package:flutter_svg/svg.dart';
 
 class PropertyPromotionComponent extends StatefulWidget {
@@ -41,13 +41,13 @@ class PropertyPromotionComponentState
   final _subCateId = ValueNotifier<String>('');
   final GlobalKey<FormFieldState> _areaKey = GlobalKey<FormFieldState>();
   late TextEditingController areaController;
-  late FocusNode focusNode;
+  late FocusNode areaFocusNode;
   @override
   void initState() {
     super.initState();
     areaController = TextEditingController();
-    focusNode = FocusNode();
-    focusNode.addListener(() {});
+    areaFocusNode = FocusNode();
+    areaFocusNode.addListener(() {});
   }
 
   @override
@@ -159,7 +159,7 @@ class PropertyPromotionComponentState
           ),
           child: TextFormField(
             key: _areaKey,
-            focusNode: focusNode,
+            focusNode: areaFocusNode,
             controller: areaController,
             keyboardType: TextInputType.text,
             textAlign: TextAlign.right,

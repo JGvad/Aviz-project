@@ -95,12 +95,6 @@ class _SplashScreenState extends State<SplashScreen> {
           description:
               'در آویز ملک خود را برای فروش،اجاره و رهن آگهی کنید و یا اگر دنبال ملک با مشخصات دلخواه خود هستید آویز ها را ببینید',
         ),
-        // WellcomeComponent(
-        //   image: 'assets/images/product_image_3.png',
-        //   title: 'اینجا محل آویز اگهی شماست',
-        //   description:
-        //       'در آویز ملک خود را برای فروش،اجاره و رهن آگهی کنید و یا اگر دنبال ملک با مشخصات دلخواه خود هستید آویز ها را ببینید',
-        // ),
       ],
     );
   }

@@ -1,4 +1,5 @@
 import 'dart:async';
+
 import 'package:aviz/Constants/color_constant.dart';
 import 'package:aviz/Feature/Authentication/bloc/bloc/auth_bloc.dart';
 import 'package:aviz/Feature/Authentication/view/component/auth_textfied_component.dart';
@@ -238,7 +239,7 @@ class _AuthConfirmCodeScreenState extends State<AuthConfirmCodeScreen> {
               text: 'ارسال مجدد کد',
               children: [
                 TextSpan(
-                  text: ' 00:00',
+                  text: '00:00',
                   style: Theme.of(context).textTheme.titleLarge!.copyWith(
                         fontSize: 14,
                         color: AppColor.textGery,
@@ -273,9 +274,7 @@ class _AuthConfirmCodeScreenState extends State<AuthConfirmCodeScreen> {
   String formatTime(int seconds) {
     int minutes = seconds ~/ 60;
     int secs = seconds % 60;
-    return minutes.toString().padLeft(2, '0') +
-        ":" +
-        secs.toString().padLeft(2, '0');
+    return "${minutes.toString().padLeft(2, '0')}:${secs.toString().padLeft(2, '0')}";
   }
 
   void _authRequest() {

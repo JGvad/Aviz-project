@@ -5,6 +5,8 @@ import 'package:aviz/Feature/Authentication/view/auth_login_screen.dart';
 import 'package:aviz/Feature/Dashboard/view/dashboard_screen.dart';
 import 'package:aviz/Feature/Splash/view/splash_screen.dart';
 import 'package:aviz/UtilNetwork/auth_management.dart';
+import 'package:device_preview/device_preview.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
@@ -17,10 +19,15 @@ void main() async {
   bool isLogin = await AuthManagement.isLogin();
   bool checkFirstTime = await AuthManagement.checkFirstTime();
 
-  runApp(AvizeApp(
-    isLogin: isLogin,
-    isFistTime: checkFirstTime,
-  ));
+  runApp(
+    DevicePreview(
+      enabled: !kReleaseMode,
+      builder: (context) => AvizeApp(
+        isLogin: isLogin,
+        isFistTime: checkFirstTime,
+      ),
+    ),
+  );
 }
 
 class AvizeApp extends StatelessWidget {
@@ -32,6 +39,8 @@ class AvizeApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      builder: DevicePreview.appBuilder,
+      locale: DevicePreview.locale(context),
       theme: ThemeData(
         textTheme: const TextTheme(
           headlineMedium: TextStyle(

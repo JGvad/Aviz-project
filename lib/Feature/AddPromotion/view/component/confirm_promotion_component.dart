@@ -1,23 +1,23 @@
 import 'dart:io';
+
+import 'package:aviz/Constants/color_constant.dart';
+import 'package:aviz/Constants/image_constant.dart';
+import 'package:aviz/Feature/AddPromotion/bloc/bloc/add_promotion_bloc.dart';
+import 'package:aviz/Feature/AddPromotion/data/model/temporary_promotion_model.dart';
+import 'package:aviz/Feature/Dashboard/view/dashboard_screen.dart';
 import 'package:aviz/Feature/Home/bloc/bloc/home_bloc.dart';
 import 'package:aviz/Util/result_massage.dart';
 import 'package:aviz/UtilNetwork/auth_management.dart';
 import 'package:aviz/Widgets/animation_loading.dart';
-import 'package:aviz/Widgets/input_owner_widget.dart';
-import 'package:flutter/material.dart';
-import 'package:aviz/Feature/AddPromotion/bloc/bloc/add_promotion_bloc.dart';
-import 'package:aviz/Feature/AddPromotion/data/model/temporary_promotion_model.dart';
-import 'package:aviz/Feature/Dashboard/view/dashboard_screen.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:image_picker/image_picker.dart';
-import 'package:image_cropper/image_cropper.dart';
-import 'package:aviz/Constants/color_constant.dart';
-import 'package:aviz/Constants/image_constant.dart';
 import 'package:aviz/Widgets/buttom_swicher_widget.dart';
-import 'package:aviz/Widgets/header_component_widget.dart';
 import 'package:aviz/Widgets/buttom_widget.dart';
+import 'package:aviz/Widgets/header_component_widget.dart';
+import 'package:aviz/Widgets/input_owner_widget.dart';
 import 'package:aviz/Widgets/textfield_widget.dart';
-
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:image_cropper/image_cropper.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:mobkit_dashed_border/mobkit_dashed_border.dart';
 
 class ConfirmPromotionConponent extends StatefulWidget {
